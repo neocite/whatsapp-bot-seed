@@ -20,6 +20,7 @@ from views.quiz import QuizView
 
 # Basic regex routes
 routes = [("^/ping", basic_views.ping),
+          ("^/saldo", basic_views.balance),
           ("^/e(cho)?\s(?P<echo_message>[^$]+)$", basic_views.echo)]
 
 

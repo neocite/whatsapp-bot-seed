@@ -7,3 +7,7 @@ def echo(message, match):
 
 def ping(message, match):
     return TextMessageProtocolEntity("Pong!", to=message.getFrom())
+
+
+def balance(message, match):
+    return TextMessageProtocolEntity("Seu saldo e de 1200 reais. Continue pagando os seus boletos em dia!", to=message.getFrom())
