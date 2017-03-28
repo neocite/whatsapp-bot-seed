@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from utils.media_sender import UrlPrintSender
 from yowsup.layers.protocol_messages.protocolentities.message_text import TextMessageProtocolEntity
 import random
