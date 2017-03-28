@@ -9,6 +9,7 @@ class SuperViews():
         self.url_print_sender = UrlPrintSender(self.interface_layer)
         self.routes = [
             ("^/help", self.help),
+            ("^/quero", self.help),
             ("^/about", self.about),
             ("^/roll", self.roll),
             ("/(?P<evenOrOdd>even|odd)$", self.even_or_odd),
@@ -32,23 +33,41 @@ class SuperViews():
         return TextMessageProtocolEntity(HELP_TEXT, to=message.getFrom())
 
 
-HELP_TEXT = """ [HELP]
-- Commands
-/help - Show this message.
-/about - About
-/s(earch) - I'm lucky!
-/i(mage) - I'm lucky with image!
-/t(ts) - Text to speech.
-/(even)(odd) - Amazing game.
-/ping - Pong.
-/echo - Echo.
-/roll - Roll a dice.
+# HELP_TEXT = """ [HELP]
+# - Commands
+# /help - Show this message.
+# /about - About
+# /s(earch) - I'm lucky!
+# /i(mage) - I'm lucky with image!
+# /t(ts) - Text to speech.
+# /(even)(odd) - Amazing game.
+# /ping - Pong.
+# /echo - Echo.
+# /roll - Roll a dice.
+#
+# Automatic:
+#     - Url (http://...) print screen.
+#     - Image (jpeg, gif, png) download.
+#     - Videos (mp4, webm) downloads.
+#     - Youtube videos.
+# """
 
-Automatic:
-    - Url (http://...) print screen.
-    - Image (jpeg, gif, png) download.
-    - Videos (mp4, webm) downloads.
-    - Youtube videos.
+HELP_TEXT = """
+Bem vindo ao PoupeCompre, tudo bem?
+
+No Poupe Compre você programa o valor da parcela que cabe no seu bolso.
+Você pode parcelar em até 12 vezes no boleto e quando realizar a quitação total do plano,
+recebe o produto.
+
+E mais, para comprar não realizamos consulta ao Serasa/SPC e aprovação de crédito,
+ou seja, não é necessário ter conta em banco,
+cartão de crédito ou comprovação de renda.
+
+Para isso preciso descobrir se você já começou algum cadastro com a gente...
+
+Por favor, informe o seu CPF digitando / + o numero (sem pontos) do seu CPF
+Exemplo /22277788890
+
 """
 
 ABOUT_TEXT = """ [Whatsapp Bot Seed]
