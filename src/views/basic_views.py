@@ -18,7 +18,7 @@ def findCustomer(message, match):
 
 
 def optin(message, match):
-    return TextMessageProtocolEntity("Vou te explicar os detalhes para voce conquistar o teu sonho...Vamos pedir para o vendedor te entregar 12 boletos no valor de 387,50 e se você conseguir paga-los em dia (eu sei que vai), la pela 6 parcela a Polishop te entrega o produto na sua casa. Responda /aceito para confirmar", to=message.getFrom())
+    return TextMessageProtocolEntity("Vou te explicar os detalhes para voce conquistar o teu sonho...Vamos pedir para o vendedor te entregar 12 boletos no valor de 387,50 e se voce conseguir paga-los em dia (eu sei que vai), la pela parcela 6 a Polishop te entrega o produto na sua casa. Responda /aceito para confirmar", to=message.getFrom())
 
 
 def confirmed(message, match):
