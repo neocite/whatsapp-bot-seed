@@ -9,8 +9,9 @@ class SuperViews():
         self.interface_layer = interface_layer
         self.url_print_sender = UrlPrintSender(self.interface_layer)
         self.routes = [
-            ("^/help", self.help),
-            ("^/quero", self.help),
+            ("ola", self.help),
+            ("olá", self.help),
+            ("oi", self.help),
             ("^/about", self.about),
             ("^/roll", self.roll),
             ("/(?P<evenOrOdd>even|odd)$", self.even_or_odd),
@@ -66,8 +67,7 @@ cartão de crédito ou comprovação de renda.
 
 Para isso preciso descobrir se você já começou algum cadastro com a gente...
 
-Por favor, informe o seu CPF digitando / + o numero (sem pontos) do seu CPF
-Exemplo /22277788890
+Por favor, informe o seu CPF digitando apenas os NÚMEROS
 
 """
 

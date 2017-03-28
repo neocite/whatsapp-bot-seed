@@ -22,8 +22,8 @@ from views.quiz import QuizView
 routes = [("^/ping", basic_views.ping),
           ("^/saldo", basic_views.balance),
           ("^[0-9]*$", basic_views.findCustomer),
-          ("^/sim", basic_views.optin),
-          ("^/aceito", basic_views.confirmed),
+          ("^sim", basic_views.optin),
+          ("^aceito", basic_views.confirmed),
           ("^/e(cho)?\s(?P<echo_message>[^$]+)$", basic_views.echo)]
 
 
