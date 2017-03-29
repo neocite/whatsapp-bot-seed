@@ -9,9 +9,9 @@ class SuperViews():
         self.interface_layer = interface_layer
         self.url_print_sender = UrlPrintSender(self.interface_layer)
         self.routes = [
-            ("ola", self.help),
-            ("olá", self.help),
-            ("oi", self.help),
+            ("ola".lower(), self.help),
+            ("olá".lower(), self.help),
+            ("oi".lower(), self.help),
             ("^/about", self.about),
             ("^/roll", self.roll),
             ("/(?P<evenOrOdd>even|odd)$", self.even_or_odd),
